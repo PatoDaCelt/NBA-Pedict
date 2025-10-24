@@ -1,0 +1,35 @@
+nba_project/
+│
+├── data_raw/                  # Datos originales descargados desde la API
+│   ├── nba_player_stats_2024-25.csv
+│   ├── nba_team_stats_2024-25.csv
+│   └── nba_players_2010_2025.csv
+│
+├── data_clean/                # Datos procesados y listos para análisis/modelos
+│   ├── nba_clean_2024-25.csv
+│   └── nba_clean_historical.csv
+│
+├── notebooks/                 # Notebooks de análisis y experimentación
+│   ├── 01_extract_data.ipynb          # Descarga de datos NBA API
+│   ├── 02_clean_transform.ipynb       # Limpieza, transformación, ETL
+│   ├── 03_exploratory_analysis.ipynb  # EDA y correlaciones
+│   ├── 04_modeling_mvp.ipynb          # Modelos para MVP
+│   ├── 05_modeling_champion.ipynb     # Modelos para campeón
+│   └── 06_dashboard_demo.ipynb        # Visualizaciones o app demo
+│
+├── src/                      # Código Python reutilizable
+│   ├── extract/
+│   │   ├── get_nba_data.py              # Funciones para extracción desde API
+│   │   └── update_data.py               # Script programable para actualizar datos
+│   ├── transform/
+│   │   └── clean_merge_data.py          # Funciones de limpieza/ETL
+│   ├── model/
+│   │   ├── mvp_model.py                 # Entrenamiento del modelo MVP
+│   │   ├── champion_model.py            # Entrenamiento campeón NBA
+│   │   └── metrics.py                   # Evaluaciones
+│   └── utils/
+│       └── helpers.py                   # Funciones de utilidad (logging, paths)
+│
+├── requirements.txt          # Librerías del entorno
+├── README.md                 # Explicación del proyecto
+└── main.py                   # Punto de entrada si automatizas el pipeline
